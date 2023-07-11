@@ -1,108 +1,92 @@
-body{
-    background-color: rgb(20, 20, 20);
-    font-family:"Archivo Black",  Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
+@font-face {
+    font-family: MXL;
+    src: url(fonts/Metropolis-ExtraLight.ttf);
 }
 
-/*header*/
-#logo{
-    text-align: center;
+@-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+*{
+    margin: 0;
+    border: 0;
+    font-family: "MXL";
 }
 
-/*navigation bar*/
-#navbar{
-    width: 100%;
-    font-family:"Archivo Black";
-    color:white;
-    font-size: 20px;
-    text-align: center;      
-}
-
-.navbar-button{
-    border:none;
-    display:inline-block;
-    padding:8px 30px;
-    vertical-align:middle;
-    overflow:hidden;
-    color: white;
-    text-decoration:none;    
-    text-align:center;
-    cursor:pointer;
-    white-space:nowrap;    
-}
-
-/*Youtube video*/
-#video{
-    padding-top: 20px;
-    text-align: center;
-}
-
-/*Music Grid*/
-#music-grid{
-    flex: 1;
-    width: 40%;       
-    margin: 25px 25% 25px 25%;   
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    flex-wrap: wrap;
-    gap: 50px; /*If you add 30% you could make it in form of list like spotify, easier to implement*/
-}   
-
-.grid-element{
-    position: relative;   
-    /*border: 1px solid black;    */
-}
-
-.grid-element img{
-    opacity: 1;
-    transition: opacity 0.3s;
-}
-
-.grid-element:hover img{
-  opacity: 0.3;
-}
-
-.grid-element:hover .grid-text-overlay{
-    opacity: 1;
+:root {
+    --bgcolor: #0f0f0f;
   }
 
-.grid-text-overlay{
-    position: absolute;
-    top: 150px;    
-    width: 100%;
-    font-size: 25px;
-    font-family: "archivo black";
+a{
+    color: white;
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--bgcolor);
+    background-image: url(img/noise.png);
+}
+
+#navbar-container ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.navbar-button{
+    list-style: none;
+    font-size: 1.5rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+}
+
+#hero{
+    
+    height: 90vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
     color: white;
     display: flex;
+    justify-content: space-between;
+    font-size: 4.5rem;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    opacity: 0;
 }
 
-/*Footer*/
-#footer{
-    padding-top: 30px;    
-    font-size: 30px;
-    color: white;
-    text-align: center;
-}
-
-.icon{
-    margin-right: 30px;
-    color: white;
-}
-
-/*Contact*/
-
-#contact{
-    color: white;
-    text-align: center;
-    height: 500px;
-    font-family: "Tsukimi Rounded",Arial, serif;
+#eysel{
+    
+    margin-top: 25rem;
 }
 
 
+#eysel{
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
 
+
+#hero-text{
+    margin-top: -10rem;
+    text-align: right;
+}
 
