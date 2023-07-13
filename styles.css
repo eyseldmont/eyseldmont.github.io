@@ -32,14 +32,16 @@
     margin: 0;
     border: 0;
     font-family: "MXL";
+    color: white;
 }
 
 :root {
     --bgcolor: #0f0f0f;
+    --visual: red 1px solid;
   }
 
 a{
-    color: white;
+    
     text-decoration: none;
 }
 
@@ -47,6 +49,21 @@ body{
     background-color: var(--bgcolor);
     background-image: url(img/noise.png);
 }
+
+
+#navbar-container{
+  background-image: url(img/noise.png);
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+#logo{
+    font-size: 2rem;
+    padding-left: 3rem;
+    padding-top: 1rem;
+}
+   
 
 #navbar-container ul{
     display: flex;
@@ -66,27 +83,50 @@ body{
     height: 90vh;
     padding-left: 2rem;
     padding-right: 2rem;
-    color: white;
     display: flex;
-    justify-content: space-between;
+   
     font-size: 4.5rem;
     align-items: center;
-}
-
-#eysel{
     
-    margin-top: 25rem;
+}
+
+#social-media-container{
+  height: 100%;
+  border: var(--visual);
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+
 }
 
 
-#eysel{
-	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+#social-media-ul{
+  list-style: none;
+  text-align: left;
+  font-size: 1.5rem;
+  margin-left: -3rem;
+  
 }
 
+.social-media-icon{
+  padding-top: 2rem;
+}
 
 #hero-text{
-    margin-top: -10rem;
-    text-align: right;
+    margin-left: 5rem;
+    margin-top: 10rem;
+    text-align: left;
+    border: var(--visual);
 }
-
+#skills{
+  padding-top: 0.5rem;
+  font-size: 3rem;
+  text-align: center;
+}
+#about-me-container{
+  padding-top: 5rem;
+  font-size: 3rem;
+  height: 100vh;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
